@@ -9,14 +9,13 @@
     </div>
     <div class="nav-right">
       <img src="@/assets/img/weather.png" alt="Weather Icon" class="weather-icon" />
+      <span>{{ currentTemperature }}</span>
     </div>
   </nav>
 </template>
 
-<script>
-export default {
-  name: 'TheNavigation',
-};
+<script setup>
+const currentTemperature = '15°C'; // Example temperature data
 </script>
 
 <style scoped>
