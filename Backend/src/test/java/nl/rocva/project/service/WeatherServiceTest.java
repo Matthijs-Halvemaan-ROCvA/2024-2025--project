@@ -1,13 +1,9 @@
 package nl.rocva.project.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
 import org.mockito.Mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -59,5 +55,5 @@ public class WeatherServiceTest {
   @Test
   public void testGetForecast() {
     // TODO: Implement this test
-    });
-}}
+  };
+}
