@@ -42,9 +42,10 @@ public class WeatherServiceTest {
     verify(weatherService).getCurrentTemperature("Dubai");
 
     // Test exception handling
-    assertThrows(IllegalArgumentException.class, () -> {
+    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
       weatherService.getCurrentTemperature(null);
     });
+    assertEquals("City name cannot be empty", exception.getMessage());
   }
 
   @Test
