@@ -41,6 +41,31 @@ const handleSubmit = () => {
   } else {
     errorMessage.value = '';
     // Handle login logic here
+    const usernameValue = username.value;
+    const passwordValue = password.value;
+    const backendUrl = 'http://localhost:8080/api/auth/login'; // Replace with your backend URL
+    const requestBody = {
+      username: usernameValue,
+      password: passwordValue,
+    };
+
+    fetch(backendUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    })
+      .then((response) => {
+        console.log(response);
+        if (!response.ok) {
+          errorMessage.value = 'Login failed.';
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log('Login successful:', data);
+      });
   }
 };
 </script>
