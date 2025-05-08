@@ -1,4 +1,5 @@
 <script setup>
+import TheFooter from './components/partials/TheFooter.vue';
 import TheNavigation from './components/partials/TheNavigation.vue';
 
 // const welcomeMessage = 'Voer je gegevens in om door te gaan!';
@@ -11,6 +12,7 @@ import TheNavigation from './components/partials/TheNavigation.vue';
   </header>
 
   <main><router-view /></main>
+  <TheFooter />
 </template>
 
 <style scoped>
