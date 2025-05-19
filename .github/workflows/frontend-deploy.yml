@@ -23,6 +23,9 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: List contents of dist
+        run: ls -la dist
+
       - name: Upload to Azure Storage
         uses: azure/cli@v1
         with:
