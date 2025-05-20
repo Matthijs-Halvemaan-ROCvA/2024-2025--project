@@ -43,7 +43,7 @@ const handleSubmit = () => {
     // Handle login logic here
     const usernameValue = username.value;
     const passwordValue = password.value;
-    const backendUrl = 'http://localhost:8080/api/auth/login'; // Replace with your backend URL
+    const backendUrl = process.env.VUE_APP_API_URL; // Replace with your backend URL
     const requestBody = {
       username: usernameValue,
       password: passwordValue,
