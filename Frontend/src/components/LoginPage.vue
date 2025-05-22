@@ -43,7 +43,7 @@ const handleSubmit = () => {
     // Handle login logic here
     const usernameValue = username.value;
     const passwordValue = password.value;
-    const backendUrl = process.env.VUE_APP_API_URL; // Replace with your backend URL
+    const backendUrl = import.meta.env.VITE_API_URL + '/auth/login'; // Replace with your backend URL
     const requestBody = {
       username: usernameValue,
       password: passwordValue,
